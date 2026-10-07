@@ -4,7 +4,7 @@
 
 > **CEO summary in 3 sentences:** This repo rebuilds nine Turing breakthroughs as small Python programs and runs every single claim. It cracks a fresh random Enigma key, weighs evidence the 1941 way, and checks the same math on live 2026 market data. Run one command (`make verify`) and every table in this file reproduces in ~30 seconds.
 
-**🌐 Live website:** open [`preview.html`](preview.html) — after push, `https://<you>.github.io/<repo>/preview.html` (Settings → Pages → Deploy from a branch → `main` → `/(root)`; `.nojekyll` included).
+**🌐 Live website (all three render the same page):** [`https://m0-ar.github.io/turing-enigma-to-intelligence-2026/`](https://m0-ar.github.io/turing-enigma-to-intelligence-2026/) · [`/preview.html`](https://m0-ar.github.io/turing-enigma-to-intelligence-2026/preview.html) · [`/docs/preview.html`](https://m0-ar.github.io/turing-enigma-to-intelligence-2026/docs/preview.html) — local: [`preview.html`](preview.html). Pages setting: `main` → `/docs` recommended (mirrors make `/` work too); `.nojekyll` in root and `docs/`.
 **🧠 Interactive:** the site has a 9-question scratch-to-pro quiz with step-by-step explanations. Score 7+ and you can teach this.
 
 ![Site preview](docs/preview_screenshot.png)
