@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turing: Enigma to Intelligence — Verified From Scratch</title>
+<meta name="description" content="Nine Turing ideas as runnable Python: machine, universal, halting, Enigma, Bombe, evidence, imitation, learning, patterns. Every claim executed.">
+<style>
+:root{--bg:#0b1020;--card:#141b33;--ink:#e8ecf8;--mut:#9aa4c7;--acc:#6ee7ff;--acc2:#a78bfa;--ok:#34d399;--warn:#fbbf24}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+header{padding:56px 20px;text-align:center;background:radial-gradient(900px 400px at 50% -80px,#243063,transparent),var(--bg)}
+.badge{display:inline-block;border:1px solid #2b3763;border-radius:999px;padding:3px 12px;margin:3px;font-size:13px;color:var(--mut)}
+h1{font-size:clamp(28px,5vw,52px);margin:14px 0 6px}.sub{color:var(--mut);max-width:820px;margin:0 auto;font-size:18px}
+.wrap{max-width:1020px;margin:0 auto;padding:24px 20px 80px}
+.card{background:var(--card);border:1px solid #26315c;border-radius:16px;padding:22px;margin:18px 0}
+.card h2{margin-top:0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.mini{background:#0f1530;border:1px solid #26315c;border-radius:12px;padding:14px}
+code,pre{background:#0a0f24;border:1px solid #26315c;border-radius:8px}code{padding:2px 6px}pre{padding:14px;overflow:auto}
+img{max-width:100%;border-radius:12px;border:1px solid #26315c}
+table{width:100%;border-collapse:collapse;font-size:15px}th,td{border-bottom:1px solid #26315c;padding:8px;text-align:left}
+.btn{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#06121f;border:none;border-radius:10px;padding:10px 18px;font-weight:700;cursor:pointer}
+.q{border:1px solid #2b3763;border-radius:12px;padding:14px;margin:10px 0}.q button{margin:4px 6px 0 0}
+.ok{color:var(--ok)}.bad{color:#f87171}footer{color:var(--mut);text-align:center;padding:30px}
+nav{position:sticky;top:0;background:rgba(11,16,32,.9);backdrop-filter:blur(8px);border-bottom:1px solid #222c55;padding:10px;text-align:center;z-index:5}
+nav a{color:var(--mut);margin:0 10px;text-decoration:none;font-size:14px}
+</style>
+</head>
+<body>
+<header>
+<div><span class="badge">MIT</span><span class="badge">Python 3.12</span><span class="badge">Docker ready</span><span class="badge">ALL PASS</span></div>
+<h1>Turing: Enigma to Intelligence</h1>
+<p class="sub"><b>CEO summary:</b> One repo rebuilds nine Turing breakthroughs as small Python programs and <b>runs every claim</b>: a machine that adds 1, one machine that runs all machines, proof no perfect bug-finder can exist, a historically accurate Enigma, a Bombe that cracks a fresh random key, evidence weighed in decibans, the imitation game, a child that learns to win, and chemicals that draw stripes. Measured, reproducible, and live-data checked — in about 30 seconds on your laptop.</p>
+<p><a class="btn" href="#beginner">Start the 5-minute guide</a> &nbsp; <a class="btn" href="#quiz">Take the quiz</a></p>
+</header>
+<nav><a href="#beginner">Beginner</a><a href="#parts">9 parts</a><a href="#demo">Demo</a><a href="#benchmarks">Benchmarks</a><a href="#live">Live data</a><a href="#quiz">Quiz</a><a href="#stories">User stories</a><a href="#pages">Website</a></nav>
+<div class="wrap">
+
+<div class="card" id="beginner">
+<h2>🌱 Beginner guide — read this and you are dangerous (in interviews too)</h2>
+<p><b>Let's work this out in a step-by-step way to be sure we have the right answer.</b> That single sentence is the whole method of this repo: never assert, always run.</p>
+<ol>
+<li><b>5-minute path:</b> run <code>make verify</code>. Watch 25+ PASS lines. You now know more than most interview candidates: what a Turing machine is, why Enigma never maps a letter to itself, and why that one flaw broke 159 quintillion settings.</li>
+<li><b>30-minute path:</b> open each card below, run its one command, change one number, re-run. Prediction → run → observe. That loop is the entire PhD skill.</li>
+<li><b>Pro path:</b> run <code>make bombe</code> (cracks a random key), <code>make benchmark</code> (rates + curves), <code>make live</code> (today's BTC/FX through the same math).</li>
+</ol>
+<p>Interview superpower: you can whiteboard the Bombe in 3 sentences — <i>guess plaintext (crib), discard alignments where a letter equals itself, propagate plug guesses until contradiction; one survivor is the key.</i> Then show the terminal doing it.</p>
+</div>
+
+<div class="card" id="parts">
+<h2>The 9 parts — claim → command → measured result</h2>
+<div class="grid">
+<div class="mini"><b>1. Machine</b><br>Tape + head + 6 rules adds 1 to 1011.<br><code>make verify</code><br>→ 1100 in <b>8 steps</b>.</div>
+<div class="mini"><b>2. Universal machine</b><br>Table as text as number (267 digits here).<br>→ same 1100/8. Software = data.</div>
+<div class="mini"><b>3. Busy beaver</b><br>Longest halting tiny machines.<br>→ 6 / 21 / 107 steps; 5-state champion 10.7M steps/s (≈4.4s full).</div>
+<div class="mini"><b>4. Halting problem</b><br>Collatz 6→8 steps; 27→111, peak 9,232.<br>Opposite inverts every judge; simulator gives up after ~335 calls.</div>
+<div class="mini"><b>5. Enigma I</b><br>Rotors I–V, reflector B/C, double-step, plugboard.<br>→ <b>AAAAA→BDZGO</b>; 5,000/5,000 never-self; 1.590×10²⁰ settings.</div>
+<div class="mini"><b>6. Bombe</b><br>Crib slide + domino plugs.<br><code>make bombe</code> → 1 survivor, true key, plaintext back.</div>
+<div class="mini"><b>7. Evidence (decibans)</b><br>Match +2.31 dB, miss −0.12 dB.<br>Accuracy 69 / 89 / 99.5% at 100/400/1,700 letters.</div>
+<div class="mini"><b>8. Imitation game</b><br>Machine says 105,621 (true 105,721, off by 100).<br>UCSD 2025: GPT-4.5 judged human 73%.</div>
+<div class="mini"><b>9. Learning + patterns</b><br>Child learns leave-×4 (15/16 piles, 100% child-first).<br>Equal diffusion fades; 18× blocker patterns.</div>
+</div>
+</div>
+
+<div class="card" id="demo">
+<h2>🎬 Demo (screenshots + video recipe)</h2>
+<p>Static proof first — generated by running the code, committed in <code>docs/</code>:</p>
+<img src="docs/pattern_compare.png" alt="Turing patterns: fade vs stripes">
+<p><i>Left: equal diffusion fades. Right: blocker 18× faster → stripes/spots. No drawing — cells only talk to neighbours.</i></p>
+<img src="docs/learning_curve.png" alt="Child learning curve">
+<img src="docs/banburismus_accuracy.png" alt="Evidence accuracy vs length">
+<h3>Video demo (60 seconds, reproducible)</h3>
+<pre>pip install -r requirements.txt
+make verify   # ALL PASS — film this
+make bombe    # watch: 1 survivor, true key, plaintext back
+make live     # live BTC/FX scored in decibans</pre>
+<p>Record with <code>asciinema rec demo.cast</code> then <code>agg demo.cast demo.gif</code>, or capture the above with any screen recorder and upload the MP4 via a GitHub issue to embed it here. Keep the GIF under ~5MB so this page stays fast.</p>
+</div>
+
+<div class="card" id="benchmarks">
+<h2>📊 Benchmarks (measured 2026-10-07)</h2>
+<table><tr><th>Metric</th><th>Value</th></tr>
+<tr><td>TM increments/s</td><td>≈508k</td></tr>
+<tr><td>Enigma letters/s</td><td>≈1.29M</td></tr>
+<tr><td>Bombe window (601 settings)</td><td>3.9s, 1 survivor</td></tr>
+<tr><td>BB5 throughput → full 47,176,870</td><td>10.7M/s → ≈4.4s</td></tr>
+<tr><td>Banburismus 100/400/1700</td><td>69.0 / 88.8 / 99.5%</td></tr></table>
+<p>Refresh: <code>make benchmark</code> → <code>results/benchmark.json</code>.</p>
+</div>
+
+<div class="card" id="live">
+<h2>📡 Live-data check (2026-10-07)</h2>
+<p>BTC ≈ <b>$83,316</b> (live), USD→EUR <b>0.88739</b> / GBP 0.75322 / JPY 158.09 (live). Returns → A–Z stream scores <b>+69.4 dB</b> self-match vs <b>−1.3 dB</b> shuffled — the 1941 math works outside English. Live-stamped message round-trips through Enigma. Refresh: <code>make live</code> (offline-safe with fallbacks; provenance in <code>results/live_verification.json</code>).</p>
+</div>
+
+<div class="card" id="quiz">
+<h2>🧠 Interactive quiz — scratch to pro (9 questions)</h2>
+<p>Answer step by step. Explanations appear after each choice. Score 7+ and you can teach this.</p>
+<div id="quizbox"></div>
+<p><b>Reasoning habit:</b> for every answer, say aloud: <i>prediction → run → observe</i>. That is the whole repo.</p>
+</div>
+
+<div class="card" id="stories">
+<h2>👥 Who is this for (user stories)</h2>
+<ul>
+<li><b>Students:</b> run one command per lecture topic; break a real cipher before lunch.</li>
+<li><b>Interview prep:</b> Turing machines, halting, Bayes log-odds, RL from rewards — all with runnable demos.</li>
+<li><b>Teachers:</b> assign the quiz + <code>make bombe</code> as a lab; grading = PASS lines.</li>
+<li><b>Researchers:</b> fork the Bombe/Banburismus/pattern sweeps; 6 PhD directions in README §7.</li>
+<li><b>Curious builders:</b> Docker one-liner reproduces every table in this page.</li>
+</ul>
+</div>
+
+<div class="card" id="pages">
+<h2>🌐 This page IS the repo website (GitHub Pages)</h2>
+<ol>
+<li>Push this repo to GitHub. Keep <code>preview.html</code> and <code>docs/*.png</code> at these paths.</li>
+<li>GitHub → Settings → Pages → Source: <b>Deploy from a branch</b> → Branch: <b>main</b> → Folder: <b>/(root)</b> → Save.</li>
+<li>Open <code>https://&lt;you&gt;.github.io/&lt;repo&gt;/preview.html</code>. That is this page. The README links here; this page links back.</li>
+<li>Optional: add <code>.nojekyll</code> (already included) so Pages serves files exactly as committed.</li>
+</ol>
+</div>
+
+<div class="card"><h2>🚀 Run it</h2><pre>git clone &lt;this-repo&gt; &amp;&amp; cd turing-*
+pip install -r requirements.txt
+make verify    # ALL PASS (~30s)
+make bombe     # crack a fresh random key (~4s)
+make benchmark # rates → results/benchmark.json
+make live      # live BTC/FX → results/live_verification.json
+pytest -q
+docker compose up  # same inside pinned image</pre></div>
+
+<footer>MIT · All numbers on this page are produced by the code in this repo. Change a number, re-run, watch the page change — that is the point.</footer>
+</div>
+<script>
+const Q=[
+["A Turing machine is…",["A tape + head + states + rule table","A GPU cluster","A neural net"],"A tape + head + states + rule table","Start from the picture: one cell watched, one rule fired, repeat."],
+["The universal machine means…",["Programs are data you feed one fixed machine","Every app needs new hardware","Python is the only language"],"Programs are data you feed one fixed machine","Our table becomes text becomes a number — then runs."],
+["The halting problem says…",["No always-answering judge is right about its opposite","Faster computers will solve it","Testing replaces proofs"],"No always-answering judge is right about its opposite","Opposite asks the judge about itself, then does the contrary."],
+["Enigma's fatal flaw:",["No letter ever encrypts to itself","Too few settings","No plugboard"],"No letter ever encrypts to itself","So any crib alignment with a self-match is impossible — most positions die instantly."],
+["A crib is…",["A guessed plaintext fragment","A rotor oil","A reflector type"],"A guessed plaintext fragment","Weather reports gave 'WETTER' daily — slide it, kill self-matches, propagate plugs."],
+["A deciban is…",["10·log10(likelihood ratio): evidence you can add","A Banbury pastry","A rotor notch"],"10·log10(likelihood ratio): evidence you can add","Multiplication becomes addition; 30 dB ≈ 1000:1."],
+["The imitation game tests…",["Indistinguishability in conversation","Arithmetic speed","Memory size"],"Indistinguishability in conversation","If judges can't tell, treat it as thinking — then argue about it."],
+["The 21-stick child learns by…",["Reward/punishment on self-play (+1/−1)","Backprop on labels","Copying the expert"],"Reward/punishment on self-play (+1/−1)","Nobody tells it leave-×4. It finds it. Check the learned table."],
+["Turing patterns need…",["Inhibitor diffusing faster than activator","Faster activator","No diffusion"],"Inhibitor diffusing faster than activator","Equal speeds fade; 18× blocker → stripes/spots from noise."]
+];
+let score=0, done=0;
+const box=document.getElementById('quizbox');
+Q.forEach((q,i)=>{
+ const d=document.createElement('div');d.className='q';
+ d.innerHTML='<b>Q'+(i+1)+'. '+q[0]+'</b><div class="opts"></div><div class="exp" style="color:#9aa4c7"></div>';
+ const opts=d.querySelector('.opts'), exp=d.querySelector('.exp');
+ q[1].forEach(c=>{
+  const b=document.createElement('button');b.className='btn';b.textContent=c;
+  b.onclick=()=>{
+   if(d.dataset.ok)return; d.dataset.ok=1; done++;
+   if(c===q[2]){score++;exp.innerHTML='<span class="ok">✓ Correct.</span> '+q[3];}
+   else{exp.innerHTML='<span class="bad">✗ Not quite.</span> Right answer: <b>'+q[2]+'</b>. '+q[3];}
+   if(done===Q.length){const p=document.createElement('p');p.innerHTML='<b>Score: '+score+'/'+Q.length+'</b> '+(score>=7?'Pro. Teach it.':'Rerun the cards above, then retry — step by step.');box.appendChild(p);}
+  };
+  opts.appendChild(b);
+ });
+ box.appendChild(d);
+});
+</script>
+</body>
+</html>
